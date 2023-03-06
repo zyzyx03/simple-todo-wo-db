@@ -1,4 +1,6 @@
-## Endpoint test with rest client (VSCode Extension)
+# Simple API written in GO using Gin Framework
+
+## Endpoint test with rest client (VsCode Extension)
 
 ```json
 # List todos
@@ -22,4 +24,11 @@ content-type: application/json
 
 # Patch todo
 PATCH http://localhost:9090/todos/3
+```
+
+## Build and Run
+
+```bash
+docker compose -f ./docker-compose.yaml build
+docker compose -f ./docker-compose.yaml up
 ```
