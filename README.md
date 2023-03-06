@@ -1,0 +1,25 @@
+## Endpoint test with rest client (VSCode Extension)
+
+```json
+# List todos
+GET http://localhost:9090/todos
+
+# List todo by ID
+GET http://localhost:9090/todos/3
+
+# Test non existing todo
+GET http://localhost:9090/todos/10
+
+# Add new todo
+POST http://localhost:9090/todos HTTP/1.1
+content-type: application/json
+
+{
+"id": "4",
+"item": "Cook Meal",
+"completed": true
+}
+
+# Patch todo
+PATCH http://localhost:9090/todos/3
+```
