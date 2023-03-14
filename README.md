@@ -4,7 +4,8 @@
 
 ```json
 # List todos
-GET http://localhost:9090/todos
+
+
 
 # List todo by ID
 GET http://localhost:9090/todos/3

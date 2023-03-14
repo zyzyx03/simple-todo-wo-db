@@ -19,6 +19,10 @@ var todos = []todo{
 	{ID: "3", Item: "Record Video", Completed: false},
 }
 
+func getVersion(context *gin.Context) {
+	context.IndentedJSON(http.StatusOK, "v0.1")
+}
+
 func getTodos(context *gin.Context) {
 	context.IndentedJSON(http.StatusOK, todos)
 }
@@ -72,6 +76,7 @@ func toggleTodoStatus(context *gin.Context) {
 func main() {
 	router := gin.Default()
 	router.GET("/todos", getTodos)
+	router.GET("/version", getVersion)
 	router.GET("/todos/:id", getTodo)
 	router.PATCH("/todos/:id", toggleTodoStatus)
 	router.POST("/todos", addTodo)
