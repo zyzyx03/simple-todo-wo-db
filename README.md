@@ -5,7 +5,8 @@
 ```json
 # List todos
 
-
+# List Version
+GET http://localhost:9090/version
 
 # List todo by ID
 GET http://localhost:9090/todos/3
