@@ -1,9 +1,8 @@
 version: "3.9"
 services:
-  app:
-    build: app
+  gotodo-alpine:
     image: todo-alpine:v0.1
-    container_name: todo-app
+    container_name: gotodo-app
     ports:
       - 9090:9090
     
